@@ -18,7 +18,7 @@ cd $BUILD_DIR
 
 # Install SWIG
 echo "-----> vamos a cambiarlo"
-curl https://jamarparris.s3.amazonaws.com/vendor_binaries/swig-2.0.5/swig.tar.gz --output /tmp/swig.tar.gz
+curl https://oguerreroromero.herokuapp.com/swig --output /tmp/swig.tar.gz
 
 echo "SWIG downloaded"
 
