@@ -12,12 +12,12 @@ CACHE_DIR=${2:-}
 ENV_DIR=${3:-}
 BP_DIR=$(cd $(dirname ${0:-}); cd ..; pwd)
 
-mkdir -p "$BUILD_DIR/.jp_vendor/"
+mkdir -p "$BUILD_DIR/.ogrtmp/"
 
 cd $BUILD_DIR
 
 # Install SWIG
-echo "-----> vamos a cambiarlo"
+echo "-----> descargamos swig 2.0"
 curl https://oguerreroromero.herokuapp.com/swig2 --output /tmp/swig.tar.gz
 
 echo "SWIG downloaded"
@@ -25,12 +25,12 @@ echo "SWIG downloaded"
 echo "-----> Installing ..."
 tar xzf /tmp/swig.tar.gz -C /tmp
 
-rm -rf "$BUILD_DIR/.jp_vendor/swig"
+rm -rf "$BUILD_DIR/.ogrtmp/swig"
 
-mv /tmp/swig "$BUILD_DIR/.jp_vendor"
+mv /tmp/swig "$BUILD_DIR/.ogrtmp"
 
-export PATH="$BUILD_DIR/.jp_vendor/swig/bin":$PATH
-export SWIG_LIB="$BUILD_DIR/.jp_vendor/swig/share/swig/2.0.5"
+export PATH="$BUILD_DIR/.ogrtmp/swig/bin":$PATH
+export SWIG_LIB="$BUILD_DIR/.ogrtmp/swig/share/swig/2.0.5"
 
 echo "export PATH=$PATH" > $BP_DIR/export
 echo "export SWIG_LIB=$SWIG_LIB" >> $BP_DIR/export
