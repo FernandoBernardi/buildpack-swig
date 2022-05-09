@@ -17,7 +17,7 @@ mkdir -p "$BUILD_DIR/.jp_vendor/"
 cd $BUILD_DIR
 
 # Install SWIG
-echo "-----> Fetching and installing SWIG 2"
+echo "-----> vamos a cambiarlo"
 curl https://jamarparris.s3.amazonaws.com/vendor_binaries/swig-2.0.5/swig.tar.gz --output /tmp/swig.tar.gz
 
 echo "SWIG downloaded"
