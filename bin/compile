@@ -19,25 +19,25 @@ cd $BUILD_DIR
 
 # Install SWIG
 echo "-----> Fetching and installing SWIG 2"
-curl https://www.cdnconecta.com.br/ftp/PainelRevenda/swig-2.0.5.tar.gz --output /tmp/swig.tar.gz
+curl https://www.cdnconecta.com.br/ftp/PainelRevenda/swig-4.1.1.tar.gz --output /tmp/swig.tar.xz
 
 echo "SWIG downloaded"
 
 echo "-----> Installing ..."
 tar xzf /tmp/swig.tar.gz -C /tmp
 
-rm -rf "$BUILD_DIR/.fbl_user/swig-2.0.5"
+rm -rf "$BUILD_DIR/.fbl_user/swig-4.1.1"
 
-mv /tmp/swig-2.0.5 "$BUILD_DIR/.fbl_user"
+mv /tmp/swig-4.1.1 "$BUILD_DIR/.fbl_user"
 
-export SWIG_LIB="$BUILD_DIR/.fbl_user/swig-2.0.5"
+export PATH="$BUILD_DIR/.fbl_user/swig-4.1.1/bin":$PATH
+export SWIG_LIB="$BUILD_DIR/.fbl_user/swig-4.1.1/share/swig/4.1.1"
 
-cd $SWIG_LIB
+echo "export PATH=$PATH" > $BP_DIR/export
+echo "export SWIG_LIB=$SWIG_LIB" >> $BP_DIR/export
+echo 'export SWIG_FEATURES="-I/usr/include/openssl"' >> $BP_DIR/export
 
-./configure --without-pcre
-make
-make install
-
+cat $BP_DIR/export
 which swig
 
 echo "SWIG installed"
