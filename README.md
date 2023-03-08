@@ -1,4 +1,4 @@
-# heroku-buildpack-ogr
+# heroku-buildpack-swig
 
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) that
 allows you to install swig which is a system dependency needed for many libraries to function correctly. E.g. M2Crypto.
@@ -16,7 +16,7 @@ To use this buildpack you'll first need to set the multi buildpack as your custo
 From here you will need to create a `.buildpacks` file which contains this buildpack and then the other buildpacks which will trigger dependencies on swig.
 
     $ cat .buildpacks
-    https://github.com/oguerreroromero/buildpack-swig-ogr
+    https://github.com/FernandoBernardi/buildpack-swig
     https://github.com/heroku/heroku-buildpack-python
 
 ## License
