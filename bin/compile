@@ -37,8 +37,8 @@ echo "$PATH"
 echo "$SWIG_LIB"
 
 echo "export PATH=$PATH" > $BP_DIR/export
-echo "export SWIG_LIB=$SWIG_LIB" > $BP_DIR/export
-echo 'export SWIG_FEATURES="-I/usr/include/openssl"' > $BP_DIR/export
+echo "export SWIG_LIB=$SWIG_LIB" >> $BP_DIR/export
+echo 'export SWIG_FEATURES="-I/usr/include/openssl"' >> $BP_DIR/export
 
 echo "$BP_DIR"
 
