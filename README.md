@@ -1,5 +1,7 @@
 # heroku-buildpack-swig
 
+## SWIG 4.1.1 - March 2023
+
 This is a [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks) that
 allows you to install swig which is a system dependency needed for many libraries to function correctly. E.g. M2Crypto.
 
