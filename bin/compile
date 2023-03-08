@@ -23,7 +23,7 @@ curl https://www.cdnconecta.com.br/ftp/PainelRevenda/swig-4.1.1.tar.gz --output 
 echo "SWIG downloaded"
 
 echo "-----> Installing ..."
-tar xzf /tmp/swig.tar.gz -C /tmp
+tar xzf /tmp/swig.tar.gz -C /tmp/swig
 
 rm -rf "$BUILD_DIR/.ogrtmp/swig"
 
