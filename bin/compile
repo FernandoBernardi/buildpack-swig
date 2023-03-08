@@ -25,12 +25,12 @@ echo "SWIG downloaded"
 echo "-----> Installing ..."
 tar xzf /tmp/swig.tar.gz -C /tmp
 
-rm -rf "$BUILD_DIR/.fbl/swig"
+# rm -rf "$BUILD_DIR/.fbl/swig"
 
 mv /tmp/swig "$BUILD_DIR/.fbltmp"
 
 export PATH="$BUILD_DIR/.fbl/swig/bin":$PATH
-export SWIG_LIB="$BUILD_DIR/.fbl/swig/share/swig/2.0.5"
+export SWIG_LIB="$BUILD_DIR/.fbl/swig/share/swig/4.1.1"
 
 echo "export PATH=$PATH" > $BP_DIR/export
 echo "export SWIG_LIB=$SWIG_LIB" >> $BP_DIR/export
