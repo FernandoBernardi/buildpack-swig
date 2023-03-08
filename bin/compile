@@ -29,8 +29,8 @@ rm -rf "$BUILD_DIR/.fbl/swig"
 
 mv /tmp/swig-4.1.1 "$BUILD_DIR/.fbltmp"
 
-export PATH="$BUILD_DIR/.fbl/swig/bin":$PATH
-export SWIG_LIB="$BUILD_DIR/.fbl/swig/share/swig/4.1.1"
+export PATH="$BUILD_DIR/.fbl/swig-4.1.1/bin":$PATH
+export SWIG_LIB="$BUILD_DIR/.fbl/swig-4.1.1/share/swig/4.1.1"
 
 echo "export PATH=$PATH" > $BP_DIR/export
 echo "export SWIG_LIB=$SWIG_LIB" >> $BP_DIR/export
