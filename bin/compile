@@ -19,7 +19,8 @@ cd $BUILD_DIR
 
 # Install SWIG
 echo "-----> Fetching and installing SWIG 2"
-curl https://www.cdnconecta.com.br/ftp/PainelRevenda/swig-4.1.1.tar.gz --output /tmp/swig.tar.gz
+# curl https://www.cdnconecta.com.br/ftp/PainelRevenda/swig-4.1.1.tar.gz --output /tmp/swig.tar.gz
+curl https://2c0a-177-207-211-156.ngrok-free.app/static/swig-4.1.1.tar.gz --output /tmp/swig.tar.gz
 
 echo "SWIG downloaded"
 
